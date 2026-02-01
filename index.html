@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Recipe Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1><span style="font-size: 1.2em; vertical-align: middle;">🍳</span> Recipe Finder</h1>
+
+    <div class="search-box">
+      <div style="position: relative; width: 100%; max-width: 400px;">
+        <input type="text" id="searchInput" placeholder="Search for ingredients (e.g. chicken, pasta)..."
+          autocomplete="off">
+        <div id="suggestions" class="suggestions-box"></div>
+      </div>
+      <button onclick="searchRecipes()">Search</button>
+    </div>
+
+    <div id="results" class="results-grid">
+      <p class="loader">Please enter an ingredient to search.</p>
+    </div>
+  </div>
+
+  <!-- Recipe Details Modal -->
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="modalBody" class="modal-body-content">
+        <!-- Content will be loaded here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
